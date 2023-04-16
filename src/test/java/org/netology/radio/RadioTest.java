@@ -1,4 +1,5 @@
 package org.netology.radio;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -27,6 +28,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotIncreaseStationAboveMax() {
         Radio radio = new Radio();
@@ -38,6 +40,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseStation() {
         Radio radio = new Radio();
@@ -49,6 +52,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotDecreaseStationBelowMin() {
         Radio radio = new Radio();
@@ -60,15 +64,17 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-   @Test
-   public void volumeTest () {                  //Volume
+
+    @Test
+    public void volumeTest() {                 
         Radio radio = new Radio();
 
         radio.setVolume(100);
 
         Assertions.assertEquals(100, radio.getMaxVolume());
         Assertions.assertEquals(0, radio.getMinVolume());
-   }
+    }
+
     @Test
     public void shouldIncreaseVolume() {
         Radio radio = new Radio();
@@ -80,6 +86,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotIncreaseVolumeAboveMax() {
         Radio radio = new Radio();
@@ -91,6 +98,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldDecreaseVolume() {
         Radio radio = new Radio();
@@ -102,6 +110,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotSetVolumeBelowMinIfCurrentMin() {
         Radio radio = new Radio();
@@ -113,6 +122,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotSetVolumeAboveMax() {
         Radio radio = new Radio();
@@ -124,6 +134,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldNotSetVolumeBelowMin() {
         Radio radio = new Radio();
@@ -135,6 +146,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void stationQuantityTest() {
         Radio radio = new Radio(11);

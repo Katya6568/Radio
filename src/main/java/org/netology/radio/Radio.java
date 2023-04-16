@@ -1,4 +1,5 @@
 package org.netology.radio;
+
 public class Radio {
 
     private int maxStation = 9;
@@ -9,37 +10,43 @@ public class Radio {
     private int volume;
     private int stationQuantity = 10;
 
-    public Radio (int stationQuantity) {
-       this.stationQuantity = stationQuantity;
-       this.maxStation = stationQuantity - 1;
-       this.minStation = 0;
+    public Radio(int stationQuantity) {
+        this.stationQuantity = stationQuantity;
+        this.maxStation = stationQuantity - 1;
+        this.minStation = 0;
     }
-    public Radio () {
+
+    public Radio() {
 
     }
+
     public int getCurrentStation() {
         return currentStation;
     }
-    public int getMaxStation () {
+
+    public int getMaxStation() {
         return maxStation;
     }
-    public int getMinStation () {
+
+    public int getMinStation() {
         return minStation;
     }
+
     public int getVolume() {
         return volume;
     }
-    public int getMaxVolume () {
+
+    public int getMaxVolume() {
         return maxVolume;
     }
-    public int getMinVolume () {
+
+    public int getMinVolume() {
         return minVolume;
     }
-    public int getStationQuantity () {
+
+    public int getStationQuantity() {
         return stationQuantity;
     }
-
-
 
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation > maxStation) {
@@ -57,6 +64,7 @@ public class Radio {
         }
         volume = newVolume;
     }
+
     public int nextStation() {
         if (currentStation < maxStation) {
             currentStation = currentStation + 1;
@@ -67,14 +75,15 @@ public class Radio {
     }
 
     public int previousStation() {
-        if (currentStation >0) {
+        if (currentStation > 0) {
             currentStation = currentStation - 1;
         } else {
             currentStation = maxStation;
         }
         return currentStation;
     }
-    public int increaseVolume () {
+
+    public int increaseVolume() {
         if (volume < maxVolume) {
             volume = volume + 1;
         } else {
@@ -83,7 +92,7 @@ public class Radio {
         return volume;
     }
 
-    public int decreaseVolume () {
+    public int decreaseVolume() {
         if (volume > minVolume) {
             volume = volume - 1;
         } else {
